@@ -56,8 +56,10 @@ html, body {
     text-decoration: none;
     font-size: 22px;
     color: #fff;
+    font-weight: 800;
 }
-#rightnav{
+
+#rightnav {
     text-decoration: none;
     font-size: 18px;
     color: #fff;
@@ -66,12 +68,47 @@ html, body {
     gap: 50px;
 
 }
-#rightnav a{
+
+#rightnav a {
     font-weight: 700;
 }
-#rightnav h3{
+
+#rightnav h3 {
     display: none;
 }
+
+#nav button{
+    border-radius: 20px;
+    /* width: 1.5vh 2.5vw; */
+    padding: 5px;
+    background-color: #fff;
+    /* border: none; */
+    color: black;
+    font-weight: 900;
+
+}
+
+
+#nav button:hover{
+    background-color: black;
+    color: #fff;
+    transition: 1.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #heading {
     margin-top: 90px;
@@ -132,7 +169,35 @@ html, body {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+    position: relative;
+
 }
+
+
+
+#herofooter a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transition: all ease 1s;
+
+}
+
+#herofooter a ::before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
 
 #herofooter #iconset {
     display: flex;
@@ -148,6 +213,101 @@ html, body {
     border-radius: 50%;
     background-color: #888;
 }
+
+
+
+
+
+
+#tech {
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+    border-top: 1px solid #888;
+}
+
+#tech h2 {
+    display: grid;
+    justify-content: center;
+    font-size: 4vw;
+    color: #fff;
+    font-weight: 900;
+    padding: 20px;
+    opacity: .7;
+}
+
+
+#techicons {
+    height: 100%;
+    width: 90%;
+    /* background-color: brown; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    gap: 6vw;
+    flex-wrap: wrap;
+    padding: 10vh;
+
+
+
+
+}
+
+
+#techicon1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#iconname h4 {
+    padding: 2vh;
+
+    color: #ada4a4;
+    font-weight: 800;
+    font-size: 1.4vw;
+}
+
+
+/* #techicon1 h4{
+    padding: 0;
+    
+    color: #888;
+    font-weight: 700;
+    font-size: 2vw;
+} */
+
+#techicon1 img {
+    height: 10vh;
+    width: 10vw;
+    border-radius: 50%;
+}
+
+.github img {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #second {
     color: #fff;
@@ -168,6 +328,7 @@ html, body {
     padding-right: 0;
     border-top: 1px solid #888;
 }
+
 .elem a {
     text-transform: uppercase;
     font-size: 6vw;
@@ -176,6 +337,7 @@ html, body {
     text-decoration: none;
     color: #fff;
 }
+
 .elem h1 {
     text-transform: uppercase;
     font-size: 6vw;
@@ -199,8 +361,8 @@ html, body {
 
 
 
-#projects{
-    height: 100vh;
+#projects {
+    height: 100%;
     width: 100%;
     /* background-color: red; */
     display: flex;
@@ -208,58 +370,108 @@ html, body {
     align-items: center;
     margin-top: 100px;
     flex-direction: column;
-    
+
+
+    /* padding-bottom:4vh ; */
+
+}
+
+#projects h1 {
+    color: #fff;
+    padding-bottom: 20px;
+
 }
 
 
-.bgtext{
-    transform: translate(-50%, -50%);
-  z-index: 2;
+.bgtext {
+
+    /* transform: translate(-50%, -50%); */
+    z-index: 5;
 }
 
 
-#firstprojectline{
+#firstprojectline {
     height: 100%;
-    width: 80%;
+    width: 90%;
     background-color: #051830;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    
+    /* display: inline-block; */
+    padding: 2vh 0vw;
+
+
 }
 
-.project1{
-    height: 45vh;
+.project1 {
+    height: 70%;
     width: 30%;
     /* background-color: rgb(234, 134, 13); */
-    border-radius: 10px;
+    border-radius: 40px;
     overflow: hidden;
+    position: relative;
+    padding: 2vh 0vw;
 }
 
-.project1 img{
+.project1 img {
     height: 45vh;
     width: 100%;
-    filter: blur(8px);
+    /* filter: blur(8px); */
     transition: 1.5s;
-    
-    
-    
+    position: relative;
+
+
+
+}
+
+
+.project1 h3 {
+    display: none;
+}
+
+.project1 h3:hover {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
 }
 
 
 
 
+/* #firstprojectline .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: (0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.text p{
+    color: aqua;
+    z-index: 999;
+} */
 
 
 
 
-
+/* 
 
 .project1 img:hover{
    
    filter:none 
-}
+} */
 
 
 
@@ -285,6 +497,7 @@ html, body {
     width: 100%;
     background-color: #021227;
     /* margin-top: 35vh; */
+    border-top: 1px solid #888;
 }
 
 #textabout {
@@ -303,8 +516,8 @@ html, body {
 }
 
 #about img {
-    width: 200px;
-    height: 220px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
 }
 
@@ -318,7 +531,7 @@ html, body {
     font-weight: 900;
 }
 
-#textabout a:hover{
+#textabout a:hover {
     color: black;
     background-color: #fff;
     border: 1px solid #000000;
@@ -330,6 +543,8 @@ html, body {
     padding: 20px 30px;
     padding-bottom: 7vw;
     background-color: #021227;
+    display: flex;
+    justify-content: center;
 }
 
 #subscribe h5 {
@@ -337,10 +552,13 @@ html, body {
     opacity: .6;
 }
 
-#subscribe h3 {
-    text-transform: uppercase;
-    font-size: 14px;
+#subscribe a {
+    text-transform: lowercase;
+    font-size: 18px;
     margin-top: 10px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
 }
 
 #footer {

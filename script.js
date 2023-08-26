@@ -5,6 +5,37 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
+// Shery.makeMagnet(".magnet");
+
+
+
+
+function darkMode(){
+  let click=document.querySelector("button")
+  document.getElementById("btn").innerHTML("LIGHT MODE")
+  if(click==true){
+    // gsap.to("#hero", {
+    //     backgroundColor: "#ab1d24",
+    //     delay: 2,
+    //     duration: 3,
+    //    });
+    document.getElementById("#hero").style("#000000")
+  }
+  else{
+
+  }
+}
+// gsap.to("#hero", {
+//   backgroundColor: "#ab1d24",
+//   delay: 2,
+//   duration: 3,
+// });
+// gsap.to("#tech", {
+//   backgroundColor: "#cb802f",
+//   delay: 3,
+//   duration: 32,
+// });
+
 function firstPageAnim() {
   var tl = gsap.timeline();
 
@@ -31,7 +62,6 @@ function firstPageAnim() {
 }
 
 function circleChaptaKaro() {
- 
   var xscale = 1;
   var yscale = 1;
 
@@ -68,7 +98,7 @@ function circleMouseFollower(xscale, yscale) {
 circleChaptaKaro();
 circleMouseFollower();
 firstPageAnim();
-
+darkMode();
 
 document.querySelectorAll(".elem").forEach(function (elem) {
   var rotate = 0;
@@ -96,13 +126,11 @@ document.querySelectorAll(".elem").forEach(function (elem) {
   });
 });
 
-function Time(){
+function Time() {
   var today = new Date();
   var time = today.getHours() + ":" + today.getMinutes();
-  
-  
-  
-  document.getElementById("time").innerHTML= time;
+
+  document.getElementById("time").innerHTML = time;
 }
 
 Time();
